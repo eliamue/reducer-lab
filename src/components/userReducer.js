@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 
 export const useRecord = (initialColor = '#541812') => {
   const [current, setCurrent] = useState(initialColor);

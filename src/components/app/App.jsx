@@ -1,6 +1,6 @@
-import React from 'react';
-import { useRecord } from '../hooks/useRecord';
-import styles from './App.css';
+import React, { useState } from 'react';
+// import { useReducer } from '../useRecord';
+
 
 const useRecord = (init) => {
   const [before, setBefore] = useState([]);
@@ -42,7 +42,7 @@ function App() {
       <input aria-label="color-picker" type="color" value={current} onChange={({ target }) => record(target.value)} />
       <div aria-label="display" style={{ backgroundColor: current, width: '10rem', height: '10rem' }}></div>
     </>
-  )
+  );
 }
 
 export default App;
