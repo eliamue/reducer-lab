@@ -17,19 +17,19 @@ const useRecord = (init) => {
     setBefore(before => [...before, current]);
     setCurrent(after[0]);
     setAfter(after => after.slice(1));
-  }
+  };
 
   const record = val => {
     setBefore(before => [...before, current]);
     setCurrent(val);
-  }
+  };
 
   return {
     undo,
     record,
     redo,
     current,
-  }
+  };
 };
 
 function App() {
